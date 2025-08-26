@@ -1,3 +1,19 @@
+import { useState } from "react";
+
+function Square() {
+  const [value, setValue] = useState("");
+
+  function handleCLick() {
+    setValue("X");
+  }
+
+  return (
+    <button className="square" onClick={handleCLick}>
+      {value}
+    </button>
+  );
+}
+
 export default function Board() {
   return (
     <>
@@ -18,8 +34,4 @@ export default function Board() {
       </div>
     </>
   );
-}
-
-function Square() {
-  return <button className="square">1</button>;
 }
